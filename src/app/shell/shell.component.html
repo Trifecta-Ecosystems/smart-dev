@@ -1,0 +1,43 @@
+<md-toolbar color="primary">
+  <i class="material-icons" (click)="sideNav.toggle()">menu</i>
+  <span>shell works!</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill-remaining-space"></span>
+
+  <span>
+    <a><md-icon>search</md-icon></a>
+    <a><md-icon>apps</md-icon></a>
+    <a><md-icon>add_alert</md-icon></a>
+     <a><md-icon>verified_user</md-icon></a>
+  </span>
+
+</md-toolbar>
+<md-sidenav-container>
+  <md-sidenav
+    #sideNav
+    mode="push">
+    <md-nav-list>
+      <md-list-item
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+        <a routerLink="/">Dashboard</a>
+      </md-list-item>
+      <br>
+      <md-list-item
+        routerLinkActive="active">
+        <a routerLink="/sensors">Sensors</a>
+      </md-list-item>
+      <br>
+      <md-list-item
+        routerLinkActive="active">
+        <a routerLink="/controls">Controllers</a>
+      </md-list-item>
+      <br>
+    </md-nav-list>
+  </md-sidenav>
+  <body>
+    <router-outlet></router-outlet>
+  </body>
+</md-sidenav-container>
+
+
