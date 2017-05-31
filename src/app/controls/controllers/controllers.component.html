@@ -1,0 +1,20 @@
+<p>
+  controllers works!
+</p>
+<ul>
+  <li *ngFor="let controller of controllers | async">
+    <!--[routerLink]="['/controls', controller]"-->
+    <!--[queryParams]="{ allowControl: controller.id < 50 ? '1' : '0' }"-->
+    <!--[fragment]="'controlling'"-->
+      <!--href="#"-->
+      <!--class="mat-list-item"-->
+      <!--(focus)="class='mat-list-focus'" &lt;!&ndash;the number 50 in queryParams is a placeholder, and simply means all controls allow editing&ndash;&gt;-->
+    Controller: {{controller.name}} |
+    Power Status: {{controller.powerStatus}} |
+    Port: {{controller.port}} |     <app-edit-controller></app-edit-controller>
+
+    <!--<router-outlet></router-outlet>-->
+  </li>
+  <li><div>controllers database works!</div></li>
+</ul>
+
