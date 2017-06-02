@@ -1,43 +1,53 @@
-<md-toolbar color="primary">
-  <i class="material-icons" (click)="sideNav.toggle()">menu</i>
-  <span>shell works!</span>
-  <!-- This fills the remaining space of the current row -->
-  <span class="fill-remaining-space"></span>
+  <md-toolbar color="primary">
+    <i fxFlex= "5%" class="material-icons" (click)="sideNav.toggle()" >menu</i>
+    <div fxFlex="85%" class="header title">Trifecta Dashboard</div>
 
-  <span>
-    <a><md-icon>search</md-icon></a>
-    <a><md-icon>apps</md-icon></a>
-    <a><md-icon>add_alert</md-icon></a>
-     <a><md-icon>verified_user</md-icon></a>
-  </span>
+    <div class="header icons" >
+      <a><md-icon>search</md-icon></a>
+      <a><md-icon>apps</md-icon></a>
+      <a><md-icon>add_alert</md-icon></a>
+      <a><md-icon>verified_user</md-icon></a>
+    </div>
+  </md-toolbar>
 
-</md-toolbar>
 <md-sidenav-container>
-  <md-sidenav
+  <md-sidenav fxLayout="column"
     #sideNav
     mode="push">
-    <md-nav-list>
+    <md-nav-list fxLayout="column">
       <md-list-item
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/">Dashboard</a>
+        <a routerLink="/"><md-icon>dashboard</md-icon>Dashboard</a>
       </md-list-item>
-      <br>
       <md-list-item
         routerLinkActive="active">
-        <a routerLink="/sensors">Sensors</a>
+        <a routerLink="/sensors"><md-icon>show_chart</md-icon>Sensors</a>
       </md-list-item>
-      <br>
       <md-list-item
         routerLinkActive="active">
-        <a routerLink="/controls">Controllers</a>
+        <a routerLink="/controls"><md-icon>settings_input_component</md-icon>Controllers</a>
       </md-list-item>
-      <br>
+    </md-nav-list>
+
+    <md-nav-list>
+
+    </md-nav-list>
+
+    <md-nav-list>
+
+    </md-nav-list>
+
+    <md-nav-list fxLayout="column">
+      <md-list-item>
+        <a><md-icon>settings</md-icon>Settings</a>
+      </md-list-item>
+      <md-list-item>
+        <a><md-icon>live_help</md-icon>Help and Feedback</a>
+      </md-list-item>
     </md-nav-list>
   </md-sidenav>
-  <body>
+  <body flexLayout="column">
     <router-outlet></router-outlet>
   </body>
 </md-sidenav-container>
-
-
