@@ -28,12 +28,11 @@ export class ControllersComponent implements OnInit {
   controllers: FirebaseListObservable<any[]>;
 
 
-  constructor(db: AngularFireDatabase) {
+  constructor(db: AngularFireDatabase, private route: ActivatedRoute) {
     this.controllers = db.list('/controllers')
   }
 
   ngOnInit() {
-    // this.controllers = this.controllersService.getControllers();
-  }
 
+  }
 }

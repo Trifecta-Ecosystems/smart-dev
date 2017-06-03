@@ -25,6 +25,7 @@ import { ControllersComponent } from './controls/controllers/controllers.compone
 import { ControllerComponent } from './controls/controllers/controller/controller.component';
 import { EditControllerComponent } from './controls/controllers/edit-controller/edit-controller.component';
 import {ControllersService} from "./controls/controllers/controllers.service";
+import { ErrorPageComponent } from './routing/error-page/error-page.component';
 
 
 
@@ -39,7 +40,8 @@ import {ControllersService} from "./controls/controllers/controllers.service";
     SharedComponent,
     ControllersComponent,
     ControllerComponent,
-    EditControllerComponent
+    EditControllerComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

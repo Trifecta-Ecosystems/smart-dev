@@ -1,6 +1,11 @@
 <p>
   controller works!
 </p>
-<h5>{{ controller.name }}</h5>
-<p>Controller status is {{ controller.powerStatus }}</p>
-<button class="btn btn-primary" (click)="powerSwitch(controller.powerStatus)">Controller Power</button>
+<!--Controller: {{controller.name}} |-->
+<!--Power Status: {{controller.powerStatus}} |-->
+<!--Port: {{controller.port}} |-->
+<!--<h5>{{ controller.name }}</h5>-->
+<!--<p>Power status is {{ controller.powerStatus }}</p>-->
+Start Time:
+End Time:
+Controller Power: <md-slide-toggle class="btn btn-primary" (click)="powerSwitch(controller.powerStatus)"></md-slide-toggle>
