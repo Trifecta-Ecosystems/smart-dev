@@ -13,7 +13,15 @@
 <md-sidenav-container>
   <md-sidenav fxLayout="column"
     #sideNav
-    mode="push">
+    mode="side">
+   <md-card>
+    <md-toolbar class="md-tall md-hue-2" >
+     <div fxLayout="column">
+        <div>Firstname Lastname</div>
+        <div>email@domainname.com</div>
+     </div>
+    </md-toolbar>
+   </md-card>
     <md-nav-list fxLayout="column">
       <md-list-item
         routerLinkActive="active"
@@ -49,5 +57,7 @@
   </md-sidenav>
   <body flexLayout="column">
     <router-outlet></router-outlet>
+    <button md-fab><md-icon>check</md-icon></button>
   </body>
 </md-sidenav-container>
+
