@@ -1,0 +1,11 @@
+<p>
+  controller works!
+</p>
+<!--Controller: {{controller.name}} |-->
+<!--Power Status: {{controller.powerStatus}} |-->
+<!--Port: {{controller.port}} |-->
+<!--<h5>{{ controller.name }}</h5>-->
+<!--<p>Power status is {{ controller.powerStatus }}</p>-->
+Start Time: <ngb-timepicker></ngb-timepicker>
+End Time: <ngb-timepicker></ngb-timepicker>
+Controller Power: <md-slide-toggle class="btn btn-primary" (click)="powerSwitch(controller.powerStatus)"></md-slide-toggle>
