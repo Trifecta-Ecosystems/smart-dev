@@ -1,12 +1,5 @@
-<p>
-  dash-sensors works!
-</p>
-<ul>
-  <li class="text" *ngFor="let sensor of sensors | async">
-    Parameter: {{sensor.name}} |
-    Current Value: {{sensor.currentValue}} |
-    Drift Value: {{sensor.driftValue}} |
-    Port: {{sensor.port}} |
-  </li>
-  <li><div>sensor database works!</div></li>
-</ul>
+<div fxLayout="column" class="container">
+  <br>
+  <app-live-data-card></app-live-data-card>
+</div>
+<br>

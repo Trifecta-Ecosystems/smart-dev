@@ -5,4 +5,25 @@
 }  */
 /**{
     border: 1px solid black;
-}*/
+}
+
+*/
+
+.nav{
+    margin-left: 5%;
+}
+
+hr{
+    width:75%;
+    color:#242424;
+}
+.fab{
+    position:fixed;
+    z-index: 2;
+    bottom: 32px;
+    right: 32px;
+}
+
+a{
+    color: black;
+}

@@ -1,7 +1,8 @@
-  <md-toolbar color="primary">
-    <i fxFlex= "5%" class="material-icons" (click)="sideNav.toggle()" >menu</i>
-    <div fxFlex="85%" class="header title">Trifecta Dashboard</div>
-
+ <md-toolbar color="primary">
+    <i class="material-icons"  (click)="sideNav.toggle()" >menu</i>
+     <span flex></span>
+    <div fxFlex="90%" class="header title">Trifecta Dashboard</div>
+    <span flex></span>
     <div class="header icons" >
       <a><md-icon>search</md-icon></a>
       <a><md-icon>apps</md-icon></a>
@@ -11,10 +12,12 @@
   </md-toolbar>
 
 <md-sidenav-container>
+
   <md-sidenav fxLayout="column"
     #sideNav
     mode="side">
-   <md-card>
+
+   <md-card  class="side-nav">
     <md-toolbar class="md-tall md-hue-2" >
      <div fxLayout="column">
         <div>Firstname Lastname</div>
@@ -22,32 +25,38 @@
      </div>
     </md-toolbar>
    </md-card>
-    <md-nav-list fxLayout="column">
+    <md-nav-list  class="nav pages" fxLayout="column" fxFlex="0 0 10%" fxLayoutAlign="space-around">
       <md-list-item
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact: true}">
-        <a routerLink="/"><md-icon>dashboard</md-icon>Dashboard</a>
+        <a routerLink="/"><md-icon>dashboard</md-icon> Dashboard</a>
       </md-list-item>
       <md-list-item
         routerLinkActive="active">
-        <a routerLink="/sensors"><md-icon>show_chart</md-icon>Sensors</a>
+        <a routerLink="/sensors"><md-icon>show_chart</md-icon> Sensors</a>
       </md-list-item>
       <md-list-item
         routerLinkActive="active">
-        <a routerLink="/controls"><md-icon>settings_input_component</md-icon>Controllers</a>
+        <a routerLink="/controls"><md-icon>settings_input_component</md-icon> Controllers</a>
       </md-list-item>
-    </md-nav-list>
-
-    <md-nav-list>
 
     </md-nav-list>
 
-    <md-nav-list>
+    <hr>
+    <md-nav-list class="nav sensors" fxLayout="column" fxLayoutAlign="space-around" *ngFor="let sensor of sensors | async">
+        <md-list-item routerLinkActive="active">
+            <a routerLink="/sensors"><md-icon>track_changes</md-icon> {{sensor.name}}</a>
+        </md-list-item>
+    </md-nav-list>
+
+      <hr>
+    <md-nav-list class="nav recipes" fxLayout="column" fxLayoutAlign="space-around">
 
     </md-nav-list>
 
-    <md-nav-list fxLayout="column">
-      <md-list-item>
+      <hr>
+    <md-nav-list class="nav other" fxLayout="column-reverse"  fxFlexLayout="space-around">
+      <md-list-item fxFlexOrder="1">
         <a><md-icon>settings</md-icon>Settings</a>
       </md-list-item>
       <md-list-item>
@@ -55,9 +64,14 @@
       </md-list-item>
     </md-nav-list>
   </md-sidenav>
+
+
   <body flexLayout="column">
     <router-outlet></router-outlet>
-    <button md-fab><md-icon>check</md-icon></button>
+
   </body>
+
 </md-sidenav-container>
 
+
+ <button md-fab class="fab"><md-icon>check</md-icon></button>
