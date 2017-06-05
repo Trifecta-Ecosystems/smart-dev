@@ -1,4 +1,5 @@
- <md-toolbar color="primary">
+
+<md-toolbar color="primary">
     <i class="material-icons"  (click)="sideNav.toggle()" >menu</i>
      <span flex></span>
     <div fxFlex="90%" class="header title">Trifecta Dashboard</div>
@@ -11,31 +12,33 @@
     </div>
   </md-toolbar>
 
-<md-sidenav-container>
+<md-sidenav-container >
 
   <md-sidenav fxLayout="column"
     #sideNav
-    mode="side">
+    mode="over">
 
-   <md-card  class="side-nav">
-    <md-toolbar class="md-tall md-hue-2" >
-     <div fxLayout="column">
-        <div>Firstname Lastname</div>
-        <div>email@domainname.com</div>
-     </div>
-    </md-toolbar>
+   <md-card  fxLayout="row" class="side-nav">
+         <md-icon>account_circle</md-icon>
+       <div fxLayout="column">
+        <div class="user name">Firstname Lastname</div>
+        <div class="user email">email@domainname.com</div>
+       </div>
    </md-card>
-    <md-nav-list  class="nav pages" fxLayout="column" fxFlex="0 0 10%" fxLayoutAlign="space-around">
-      <md-list-item
+    <md-nav-list fxLayout="column" fxFlex="0 0 10%" fxLayoutAlign="space-around">
+
+      <md-list-item class="nav pages"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{exact: true}">
         <a routerLink="/"><md-icon>dashboard</md-icon> Dashboard</a>
       </md-list-item>
-      <md-list-item
+
+      <md-list-item class="nav pages"
         routerLinkActive="active">
         <a routerLink="/sensors"><md-icon>show_chart</md-icon> Sensors</a>
       </md-list-item>
-      <md-list-item
+
+      <md-list-item class="nav pages"
         routerLinkActive="active">
         <a routerLink="/controls"><md-icon>settings_input_component</md-icon> Controllers</a>
       </md-list-item>
@@ -43,7 +46,7 @@
     </md-nav-list>
 
     <hr>
-    <md-nav-list class="nav sensors" fxLayout="column" fxLayoutAlign="space-around" *ngFor="let sensor of sensors | async">
+    <md-nav-list fxLayout="column" fxLayoutAlign="space-around" class="nav sensors"  *ngFor="let sensor of sensors | async">
         <md-list-item routerLinkActive="active">
             <a routerLink="/sensors"><md-icon>track_changes</md-icon> {{sensor.name}}</a>
         </md-list-item>
@@ -55,23 +58,33 @@
     </md-nav-list>
 
       <hr>
-    <md-nav-list class="nav other" fxLayout="column-reverse"  fxFlexLayout="space-around">
-      <md-list-item fxFlexOrder="1">
+    <md-nav-list  fxLayout="column-reverse"  fxLayoutAlign="space-around">
+      <md-list-item fxFlexOrder="1" class="nav other">
         <a><md-icon>settings</md-icon>Settings</a>
       </md-list-item>
-      <md-list-item>
+      <md-list-item class="nav other">
         <a><md-icon>live_help</md-icon>Help and Feedback</a>
       </md-list-item>
     </md-nav-list>
   </md-sidenav>
 
-
-  <body flexLayout="column">
+  <body fxLayout="column">
     <router-outlet></router-outlet>
-
   </body>
-
 </md-sidenav-container>
 
-
- <button md-fab class="fab"><md-icon>check</md-icon></button>
+ <button md-fab class="fab" [mdMenuTriggerFor]="menu"><md-icon>check</md-icon></button>
+ <md-menu #menu="mdMenu">
+     <button md-menu-item>
+         <md-icon>pets</md-icon>
+         <span>Assign Controllers</span>
+     </button>
+     <button md-menu-item (click)="openDialog()">
+         <md-icon>pets</md-icon>
+        <span>Calibrate Senor</span>
+     </button>
+     <button md-menu-item>
+         <md-icon>pets</md-icon>
+         <span>Manual Test Entry</span>
+     </button>
+ </md-menu>

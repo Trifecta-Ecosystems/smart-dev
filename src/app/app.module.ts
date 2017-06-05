@@ -25,6 +25,7 @@ import { ExpandoCardComponent } from './shared/expando-card/expando-card.compone
 import { LiveDataCardComponent } from './shared/live-data-card/live-data-card.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CockpitComponent } from './shared/cockpit/cockpit.component';
+import { CalibrationComponent } from './shared/calibration/calibration.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { CockpitComponent } from './shared/cockpit/cockpit.component';
     SharedComponent,
     ExpandoCardComponent,
     LiveDataCardComponent,
-    CockpitComponent
+    CockpitComponent,
+    CalibrationComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$dash-main-primary: mat-palette($mat-green, A700);
+$dash-main-primary: mat-palette($mat-green);
 $dash-main-accent:  mat-palette($mat-green);
 
 // The warn palette is optional (defaults to red).
