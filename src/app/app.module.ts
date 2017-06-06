@@ -14,7 +14,6 @@ import { ShellComponent } from './shell/shell.component';
 import { DashMainComponent } from './dash-main/dash-main.component';
 import { DashControlsComponent } from './controls/dash-controls/dash-controls.component';
 import {DashSensorsComponent} from './dash-sensors/dash-sensors.component';
-import { DashControlsComponent } from './dash-controls/dash-controls.component';
 import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.component';
 import { SharedComponent } from './shared/shared.component';
 import {AppRoutingModule} from './routing/app-routing.module';
@@ -27,9 +26,6 @@ import { LiveDataCardComponent } from './shared/live-data-card/live-data-card.co
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { CockpitComponent } from './shared/cockpit/cockpit.component';
 import { CalibrationComponent } from './shared/calibration/calibration.component';
-import {AppRoutingModule} from "./routing/app-routing.module";
-import {AngularFireModule} from "angularfire2";
-import {environment} from "../environments/environment";
 import { ControllersComponent } from './controls/controllers/controllers.component';
 import { ControllerComponent } from './controls/controllers/controller/controller.component';
 import { EditControllerComponent } from './controls/controllers/edit-controller/edit-controller.component';
@@ -50,7 +46,7 @@ import { ErrorPageComponent } from './routing/error-page/error-page.component';
     ControllersComponent,
     ControllerComponent,
     EditControllerComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
     SharedComponent,
     ExpandoCardComponent,
     LiveDataCardComponent,
