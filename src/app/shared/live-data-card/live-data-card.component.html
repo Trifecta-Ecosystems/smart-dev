@@ -1,0 +1,23 @@
+  <md-card>
+   <md-card-header>
+     <md-card-title>
+       <h1>Live Sensor Data</h1>
+     </md-card-title>
+    <md-card-subtitle>
+    <h2>System at a glance</h2>
+    </md-card-subtitle>
+  </md-card-header>
+  </md-card>
+  <md-card>
+  <md-card-content fxLayoutWrap="wrap" fxLayoutAlign="space-around">
+  <md-card fxFlex="30%" fxFlexAlign="center center" class="data card"  *ngFor="let sensor of sensors | async">
+   <md-card-header fxLayout="column">
+    <h4> {{sensor.name}}</h4>
+     <p> Port: {{sensor.port}} </p>
+   </md-card-header>
+    <md-card-content>
+     <h1>{{sensor.currentValue}} {{sensor.units}}</h1>
+    </md-card-content>
+  </md-card>
+  </md-card-content>
+</md-card>

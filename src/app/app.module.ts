@@ -13,14 +13,23 @@ import {CoreModule} from './core/core.module';
 import { ShellComponent } from './shell/shell.component';
 import { DashMainComponent } from './dash-main/dash-main.component';
 import { DashControlsComponent } from './controls/dash-controls/dash-controls.component';
-import {DashSensorsComponent} from "./dash-sensors/dash-sensors.component";
+import {DashSensorsComponent} from './dash-sensors/dash-sensors.component';
+import { DashControlsComponent } from './dash-controls/dash-controls.component';
 import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.component';
 import { SharedComponent } from './shared/shared.component';
+import {AppRoutingModule} from './routing/app-routing.module';
+import {AngularFireModule} from 'angularfire2';
+import {environment} from '../environments/environment';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+import {AngularFireAuthModule} from 'angularfire2/auth';
+import { ExpandoCardComponent } from './shared/expando-card/expando-card.component';
+import { LiveDataCardComponent } from './shared/live-data-card/live-data-card.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CockpitComponent } from './shared/cockpit/cockpit.component';
+import { CalibrationComponent } from './shared/calibration/calibration.component';
 import {AppRoutingModule} from "./routing/app-routing.module";
 import {AngularFireModule} from "angularfire2";
 import {environment} from "../environments/environment";
-import {AngularFireDatabaseModule} from "angularfire2/database";
-import {AngularFireAuthModule} from "angularfire2/auth";
 import { ControllersComponent } from './controls/controllers/controllers.component';
 import { ControllerComponent } from './controls/controllers/controller/controller.component';
 import { EditControllerComponent } from './controls/controllers/edit-controller/edit-controller.component';
@@ -42,6 +51,11 @@ import { ErrorPageComponent } from './routing/error-page/error-page.component';
     ControllerComponent,
     EditControllerComponent,
     ErrorPageComponent
+    SharedComponent,
+    ExpandoCardComponent,
+    LiveDataCardComponent,
+    CockpitComponent,
+    CalibrationComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +67,8 @@ import { ErrorPageComponent } from './routing/error-page/error-page.component';
     AngularFireAuthModule,
     NgbModule.forRoot(),
     CoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [ControllersService],
   bootstrap: [AppComponent]
