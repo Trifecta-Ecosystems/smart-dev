@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database";
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-dash-sensors',
@@ -9,7 +9,7 @@ import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database
 export class DashSensorsComponent implements OnInit {
   sensors: FirebaseListObservable<any[]>;
   constructor(db: AngularFireDatabase) {
-    this.sensors = db.list('/sensors')
+    this.sensors = db.list('/sensors');
   }
 
   ngOnInit() {

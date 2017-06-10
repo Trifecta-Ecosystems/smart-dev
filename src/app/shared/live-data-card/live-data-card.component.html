@@ -1,23 +1,37 @@
-  <md-card>
-   <md-card-header>
-     <md-card-title>
-       <h1>Live Sensor Data</h1>
-     </md-card-title>
-    <md-card-subtitle>
-    <h2>System at a glance</h2>
-    </md-card-subtitle>
-  </md-card-header>
-  </md-card>
-  <md-card>
-  <md-card-content fxLayoutWrap="wrap" fxLayoutAlign="space-around">
-  <md-card fxFlex="30%" fxFlexAlign="center center" class="data card"  *ngFor="let sensor of sensors | async">
-   <md-card-header fxLayout="column">
-    <h4> {{sensor.name}}</h4>
-     <p> Port: {{sensor.port}} </p>
-   </md-card-header>
-    <md-card-content>
-     <h1>{{sensor.currentValue}} {{sensor.units}}</h1>
+<md-card style="padding:0">
+  <div style="padding:10px">
+    <md-card-header>
+      <md-card-title>
+        <h1>Live Sensor Data</h1>
+      </md-card-title>
+      <md-card-subtitle>
+        <h2>System at a glance</h2>
+      </md-card-subtitle>
+    </md-card-header>
+  </div>
+
+  <hr>
+
+  <div style="padding:10px">
+    <md-card-content fxLayoutWrap="wrap" fxLayoutAlign="space-around">
+      <md-card fxFlex="30%" fxFlexAlign="center center" class="data card" fxLayout="row"  *ngFor="let sensor of sensors | async">
+          <div fxFlex="60%">
+          <md-card-header fxLayout="column">
+              <h4> {{sensor.name}}</h4>
+              <p> Port: {{sensor.port}} </p>
+          </md-card-header>
+          <md-card-content fxLayout="row" fxLayout>
+             <h1>{{sensor.currentValue}} {{sensor.units}}</h1>
+          </md-card-content>
+          </div>
+          <div fxFlex="40%" fxLayoutAlign="center center">
+          <md-icon style="font-size:48px
+                         "
+                   [ngStyle]="{color: getColor()}"
+                   class="iconIndicator"
+          >{{getNitrateValue()}}</md-icon>
+          </div>
+      </md-card>
     </md-card-content>
-  </md-card>
-  </md-card-content>
+  </div>
 </md-card>

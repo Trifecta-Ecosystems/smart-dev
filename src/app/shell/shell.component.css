@@ -1,13 +1,18 @@
-.side-nav .user {
-  font-size: 14px; }
+html, body, md-sidenav-container, .mat-sidenav-content {
+  height: 100%; }
 
 hr {
   width: 75%;
   color: #242424; }
 
+.app-toolbar, .mat-toolbar-layout {
+  position: fixed;
+  z-index: 4;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
+
 .fab {
   position: fixed;
-  z-index: 2;
+  z-index: 6;
   bottom: 32px;
   right: 32px; }
 
@@ -16,6 +21,12 @@ a {
   margin-left: 16px; }
 
 .nav:hover {
-  background-color: #919191; }
+  background-color: #F1F6F8; }
+
+.mat-icon:hover {
+  color: #ff710d; }
+
+a:hover {
+  color: #ff710d; }
 
 /*# sourceMappingURL=shell.component.css.map */

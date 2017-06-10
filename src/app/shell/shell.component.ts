@@ -8,6 +8,8 @@ import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database
 })
 export class ShellComponent implements OnInit {
   sensors: FirebaseListObservable<any[]>;
+
+
   constructor(db: AngularFireDatabase) {
     this.sensors = db.list('/sensors');
   }
