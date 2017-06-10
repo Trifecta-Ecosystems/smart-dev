@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-body {
+*{
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
+
+
+.background-container{
+  background-color: #F1F6F8;
+  padding-top:66px;
+}
+/*
+.container{
+  width:66%;
+}
+
+*/

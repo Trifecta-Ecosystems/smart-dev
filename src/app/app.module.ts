@@ -29,8 +29,11 @@ import { CalibrationComponent } from './shared/calibration/calibration.component
 import { ControllersComponent } from './controls/controllers/controllers.component';
 import { ControllerComponent } from './controls/controllers/controller/controller.component';
 import { EditControllerComponent } from './controls/controllers/edit-controller/edit-controller.component';
-import {ControllersService} from "./controls/controllers/controllers.service";
+import {ControllersService} from './controls/controllers/controllers.service';
 import { ErrorPageComponent } from './routing/error-page/error-page.component';
+import { ShortTermChartComponent } from './shared/short-term-chart/short-term-chart.component';
+import { IndividualSensorCardComponent } from './shared/individual-sensor-card/individual-sensor-card.component';
+import {ChartsModule} from 'ng2-charts';
 
 
 
@@ -51,7 +54,9 @@ import { ErrorPageComponent } from './routing/error-page/error-page.component';
     ExpandoCardComponent,
     LiveDataCardComponent,
     CockpitComponent,
-    CalibrationComponent
+    CalibrationComponent,
+    ShortTermChartComponent,
+    IndividualSensorCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +69,8 @@ import { ErrorPageComponent } from './routing/error-page/error-page.component';
     NgbModule.forRoot(),
     CoreModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ChartsModule
   ],
   providers: [ControllersService],
   bootstrap: [AppComponent]

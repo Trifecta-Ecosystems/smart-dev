@@ -24,3 +24,25 @@ $dash-main-theme: mat-light-theme($dash-main-primary, $dash-main-accent, $dash-m
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($dash-main-theme);
+
+.sensor-theme {
+  $dash-sensor-primary: mat-palette($mat-yellow);
+  $dash-sensor-accent: mat-palette($mat-yellow);
+  $dash-sensor-warn: mat-palette($mat-red);
+
+  $dash-sensor-theme: mat-dark-theme($dash-sensor-primary, $dash-sensor-accent, $dash-sensor-warn);
+
+  @include angular-material-theme($dash-sensor-theme);
+}
+
+.control-theme {
+  $control-primary: mat-palette($mat-blue);
+  $control-accent: mat-palette($mat-light-blue);
+  $control-warn: mat-palette($mat-red);
+
+  $control-theme: mat-dark-theme($control-primary, $control-accent, $control-warn);
+
+  @include angular-material-theme($control-theme);
+}
+
+

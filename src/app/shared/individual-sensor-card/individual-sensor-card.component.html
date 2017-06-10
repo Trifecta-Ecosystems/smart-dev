@@ -1,0 +1,19 @@
+<md-card class= "md-card-pop" *ngFor="let sensor of sensors | async" (click)= "changeShowStatus()" fxLayout="column" style="padding:0; margin: 10px">
+  <div>
+  <md-card-header fxFlex="30%" fxLayout="column" style="padding:10px" >
+    <md-card-title> {{sensor.name}}</md-card-title>
+    <md-card-subtitle>Port: {{sensor.port}}</md-card-subtitle>
+    <md-card>
+      <h3>Drift Value:</h3>
+      <h1>{{sensor.driftValue}}</h1>
+    </md-card>
+  </md-card-header>
+
+  <app-short-term-chart fxFlex="100%" ></app-short-term-chart>
+  </div>
+  <hr>
+  <md-card-content *ngIf="showHide" class="Hidden Card Content" fxLayout="row" fxLayoutAlign="space-around center"  fxLayoutWrap="wrap" style="padding:10px">
+    <P>These are the instructions for whatever sensor you have</P>
+    <button md-button> Here is a button</button>
+  </md-card-content>
+</md-card>
