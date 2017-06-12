@@ -17,8 +17,8 @@
       <md-card fxFlex="30%" fxFlexAlign="center center" class="data card" fxLayout="row"  *ngFor="let sensor of sensors | async">
           <div fxFlex="60%">
           <md-card-header fxLayout="column">
-              <h4> {{sensor.name}}</h4>
-              <p> Port: {{sensor.port}} </p>
+              <h4> {{ sensor.name }}</h4>
+              <p> Port: {{ sensor.port }} </p>
           </md-card-header>
           <md-card-content fxLayout="row" fxLayout>
              <h1>{{sensor.currentValue}} {{sensor.units}}</h1>
