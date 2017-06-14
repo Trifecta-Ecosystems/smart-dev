@@ -1,19 +1,4 @@
-<p>
-  controllers works!
-</p>
-<ul>
-  <li *ngFor="let controller of controllers | async">
-    <md-card>
-      <div>
-      Controller: {{controller.name}} |
-      Power Status: {{controller.powerStatus}} |
-      Port: {{controller.port}} |
-        <app-controller></app-controller>
-        <app-edit-controller></app-edit-controller>
-      <!--<router-outlet></router-outlet>-->
-      </div>
-    </md-card>
-  </li>
-  <hr>
-  <li><div>controllers database works!</div></li>
-</ul>
+<div class="cockpit" *ngFor="let controller of controllers | async">
+    <app-controller></app-controller>
+</div>
+

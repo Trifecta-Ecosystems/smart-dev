@@ -1,11 +1,12 @@
-<p>
-  controller works!
-</p>
-<!--Controller: {{controller.name}} |-->
-<!--Power Status: {{controller.powerStatus}} |-->
-<!--Port: {{controller.port}} |-->
-<!--<h5>{{ controller.name }}</h5>-->
-<!--<p>Power status is {{ controller.powerStatus }}</p>-->
-Start Time: <ngb-timepicker></ngb-timepicker>
-End Time: <ngb-timepicker></ngb-timepicker>
-Controller Power: <md-slide-toggle class="btn btn-primary" (click)="powerSwitch(controller.powerStatus)"></md-slide-toggle>
+<md-card fx Flex="100%" fxLayout="row">
+  <md-card-header fxFlex="30%" fxLayout="column" >
+    <md-card-title> {{controller.name}}</md-card-title>
+    <md-card-subtitle> Brand: {{controller.brand}} </md-card-subtitle>
+    <md-card-subtitle>Port: {{controller.port}}</md-card-subtitle>
+  </md-card-header>
+  <md-card-content fxFlex="70%">
+    <p>Start:</p> <ngb-timepicker fxFlex="40%" [(ngModel)]="startTime" [meridian]=true size="small"></ngb-timepicker>
+    <p>End:</p> <ngb-timepicker fxFlex="40%" [(ngModel)]="endTime" [meridian]=true size="small"></ngb-timepicker>
+    <p>On/Off</p><md-slide-toggle fxFlex="20%" fxFlexAlign="center"  class="example-margin" value="primary"></md-slide-toggle>
+  </md-card-content>
+</md-card>

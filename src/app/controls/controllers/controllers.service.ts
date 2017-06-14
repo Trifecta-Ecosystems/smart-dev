@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database";
-import {Subject} from "rxjs/Subject";
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {Subject} from 'rxjs/Subject';
 
 @Injectable()
 export class ControllersService {
@@ -8,7 +8,7 @@ export class ControllersService {
   controllerSubject = new Subject();
 
   constructor(db: AngularFireDatabase) {
-    this.controllers = db.list('/controllers', { preserveSnapshot: true }),
+    this.controllers = db.list('/controllers', { preserveSnapshot: true });
     this.controllerSubject = new Subject();
   }
   // !!!!The below seems unnecessary with a real time database!!!!

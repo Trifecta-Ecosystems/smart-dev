@@ -1,7 +1,7 @@
 import {Component, OnInit, Pipe, PipeTransform} from '@angular/core';
-import {ControllersService} from "./controllers.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import {AngularFireDatabase, FirebaseListObservable} from "angularfire2/database";
+import {ControllersService} from './controllers.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 // Add a pipe, when ready to integrate Firebase DB through controllers.service.ts
 //
@@ -29,7 +29,7 @@ export class ControllersComponent implements OnInit {
 
 
   constructor(db: AngularFireDatabase, private route: ActivatedRoute) {
-    this.controllers = db.list('/controllers')
+    this.controllers = db.list('/controllers');
   }
 
   ngOnInit() {

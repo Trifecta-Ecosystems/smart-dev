@@ -2,11 +2,13 @@
 <md-card fxLayout="row" *ngFor="let controller of controllers | async">
   <md-card-header fxFlex="30%" fxLayout="column" >
     <md-card-title> {{controller.name}}</md-card-title>
-      <md-card-subtitle> Brand: {{controller.brand}} </md-card-subtitle>
+    <md-card-subtitle> Brand: {{controller.brand}} </md-card-subtitle>
     <md-card-subtitle>Port: {{controller.port}}</md-card-subtitle>
   </md-card-header>
- <p>Start:</p> <ngb-timepicker fxFlex="30%" [(ngModel)]="time" [meridian]=true size="small"></ngb-timepicker>
-  <p>End:</p> <ngb-timepicker fxFlex="30%" [(ngModel)]="time" [meridian]=true size="small"></ngb-timepicker>
-  <p>On/Off</p><md-slide-toggle fxFlex="10%" fxFlexAlign="center"  class="example-margin" value="primary"></md-slide-toggle>
+  <md-card-content fxFlex="70%">
+    <p>Start:</p> <ngb-timepicker fxFlex="40%" [(ngModel)]="startTime" [meridian]=true size="small"></ngb-timepicker>
+    <p>End:</p> <ngb-timepicker fxFlex="40%" [(ngModel)]="endTime" [meridian]=true size="small"></ngb-timepicker>
+    <p>On/Off</p><md-slide-toggle fxFlex="20%" fxFlexAlign="center"  class="example-margin" value="primary"></md-slide-toggle>
+  </md-card-content>
 </md-card>
 </md-card>
