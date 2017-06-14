@@ -30,6 +30,7 @@ $dash-main-theme: mat-light-theme($dash-main-primary, $dash-main-accent, $dash-m
   $dash-sensor-accent: mat-palette($mat-yellow);
   $dash-sensor-warn: mat-palette($mat-red);
 
+  //todo these both call the mat-dark-theme method, while the first calls the mat-light-theme.  Is it ok they both call the same method?
   $dash-sensor-theme: mat-dark-theme($dash-sensor-primary, $dash-sensor-accent, $dash-sensor-warn);
 
   @include angular-material-theme($dash-sensor-theme);
@@ -40,6 +41,7 @@ $dash-main-theme: mat-light-theme($dash-main-primary, $dash-main-accent, $dash-m
   $control-accent: mat-palette($mat-light-blue);
   $control-warn: mat-palette($mat-red);
 
+  //todo these both call the mat-dark-theme method, while the first calls the mat-light-theme.  Is it ok they both call the same method?
   $control-theme: mat-dark-theme($control-primary, $control-accent, $control-warn);
 
   @include angular-material-theme($control-theme);
