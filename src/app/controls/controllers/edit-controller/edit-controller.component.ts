@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
-import {ControllersService} from "../controllers.service";
-import {ActivatedRoute, Params, Router} from "@angular/router";
+import {ControllersService} from '../controllers.service';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 
 
 @Component({
@@ -18,8 +18,7 @@ export class EditControllerComponent implements OnInit {
   constructor(
     private controllersService: ControllersService,
     private route: ActivatedRoute,
-    private router: Router)
-  { }
+    private router: Router) { }
 
   ngOnInit() {
     // this.route.queryParams

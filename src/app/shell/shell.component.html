@@ -1,51 +1,86 @@
  <md-sidenav-container class="app-inner">
-    <md-sidenav fxLayout="column" #sideNav
-      mode="over" (click)="sideNav.toggle()" class="app-sidebar-panel" [opened]="false">
+    <md-sidenav
+      fxLayout="column" #sideNav
+      mode="over"
+      (click)="sideNav.toggle()"
+      class="app-sidebar-panel"
+      [opened]="false">
 
       <md-card  fxLayout="row">
-        <md-icon class="md-card-avatar">account_circle</md-icon>
+        <md-icon class="md-card-avatar">
+          account_circle
+        </md-icon>
         <div fxLayout="column">
-          <div class="user name">Firstname Lastname</div>
-          <div class="user email">email@domainname.com</div>
+          <div class="user name">
+            Firstname Lastname
+          </div>
+          <div class="user email">
+            email@domainname.com
+          </div>
         </div>
       </md-card>
-      <md-nav-list fxLayout="column" fxLayoutAlign="space-around">
+      <md-nav-list
+        fxLayout="column"
+        fxLayoutAlign="space-around">
 
-        <md-list-item class="nav pages"
-                    routerLinkActive="active"
-                    [routerLinkActiveOptions]="{exact: true}" >
-          <a routerLink="/"><md-icon>dashboard</md-icon> Dashboard</a>
+        <md-list-item
+          class="nav pages"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact: true}" >
+          <a routerLink="/">
+            <md-icon>dashboard</md-icon> Dashboard
+          </a>
         </md-list-item>
 
-        <md-list-item class="nav pages"
-                    routerLinkActive="active">
-          <a routerLink="/sensors"><md-icon>show_chart</md-icon> Sensors</a>
+        <md-list-item
+          class="nav pages"
+          routerLinkActive="active">
+          <a routerLink="/sensors">
+            <md-icon>show_chart</md-icon> Sensors
+          </a>
         </md-list-item>
 
-        <md-list-item class="nav pages"
-                      routerLinkActive="active"
-        ><a routerLink="/controls"><md-icon>settings_input_component</md-icon> Controllers</a>
+        <md-list-item
+          class="nav pages"
+          routerLinkActive="active">
+          <a routerLink="/controls">
+            <md-icon>settings_input_component</md-icon> Controllers
+          </a>
         </md-list-item>
       </md-nav-list>
 
       <hr>
 
-      <md-nav-list fxLayout="column" fxLayoutAlign="space-around" class="nav sensors" >
-        <md-list-item routerLinkActive="active"  *ngFor="let sensor of sensors | async">
-            <a routerLink="/sensors"><md-icon>track_changes</md-icon> {{sensor.name}}</a>
+      <md-nav-list
+        fxLayout="column"
+        fxLayoutAlign="space-around"
+        class="nav sensors">
+        <md-list-item
+          routerLinkActive="active"
+          *ngFor="let sensor of sensors | async">
+          <a routerLink="/sensors">
+            <md-icon>track_changes</md-icon> {{sensor.name}}
+          </a>
         </md-list-item>
       </md-nav-list>
 
       <hr>
 
-      <md-nav-list class="nav recipes" fxLayout="column" fxLayoutAlign="space-around">
+      <md-nav-list
+        class="nav recipes"
+        fxLayout="column"
+        fxLayoutAlign="space-around">
 
       </md-nav-list>
 
       <hr>
 
-      <md-nav-list  fxLayout="column-reverse"  fxLayoutAlign="space-around">
-        <md-list-item fxFlexOrder="1" class="nav other">
+      <md-nav-list
+        fxLayout="column-reverse"
+        fxLayoutAlign="space-around">
+        <md-list-item
+          fxFlexOrder="1"
+          class="nav other">
           <a><md-icon>settings</md-icon>Settings</a>
         </md-list-item>
         <md-list-item class="nav other">
@@ -53,18 +88,35 @@
         </md-list-item>
       </md-nav-list>
     </md-sidenav>
-      <md-toolbar  class="app-toolbar"  color="primary">
-        <button md-icon-button (click)="sideNav.toggle()">
+
+      <md-toolbar
+        class="app-toolbar"
+        color="primary">
+        <button
+          md-icon-button
+          (click)="sideNav.toggle()">
           <md-icon>menu</md-icon>
         </button>
         <div></div>
-        <div fxFlex="90%" class="header title">Trifecta Dashboard</div>
+        <div
+          fxFlex="90%"
+          class="header title"
+        >Trifecta Dashboard
+        </div>
         <div></div>
         <div class="header icons" >
-          <button md-icon-button><md-icon>search</md-icon></button>
-          <button md-icon-button><md-icon>apps</md-icon></button>
-          <button md-icon-button><md-icon>add_alert</md-icon></button>
-          <button md-icon-button><md-icon>verified_user</md-icon></button>
+          <button md-icon-button><md-icon>
+            search
+          </md-icon></button>
+          <button md-icon-button><md-icon>
+            apps
+          </md-icon></button>
+          <button md-icon-button><md-icon>
+            add_alert
+          </md-icon></button>
+          <button md-icon-button><md-icon>
+            verified_user
+          </md-icon></button>
         </div>
       </md-toolbar>
       <router-outlet></router-outlet>

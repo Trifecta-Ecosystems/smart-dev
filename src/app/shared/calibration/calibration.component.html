@@ -1,5 +1,5 @@
 
-<md-card class= "md-card-pop" *ngFor="let sensor of sensors | async" (click)= "changeShowStatus()" >
+<md-card class= "md-card-pop" *ngFor="let sensor of sensors | async" (click)="changeShowStatus()" >
   <md-card fxLayout="row">
     <md-card-header fxFlex="30%" fxLayout="column" >
       <md-card-title> {{sensor.name}}</md-card-title>
